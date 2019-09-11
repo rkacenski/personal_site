@@ -1,0 +1,44 @@
+/* Import Bulma Utilities */
+@import '~bulma/sass/utilities/initial-variables';
+@import '~bulma/sass/utilities/functions';
+
+@font-face {
+    font-family:"GT";
+    src:url("/fonts/GTEestiDisplay-Regular-1b07bf16.ttf?1553506557") format("truetype"),
+    url("/fonts/GTEestiDisplay-Regular-d62d0c92.woff2?1553506557") format("woff2"),
+    url("/fonts/GTEestiDisplay-Regular-4c708fcc.woff?1553506557") format("woff");
+    font-weight:normal;
+    font-style:normal
+   }
+   @font-face {
+    font-family:"GT";
+    src:url("/fonts/GTEestiDisplay-Medium-bea79cdb.ttf?1553506557") format("truetype"),
+    url("/fonts/GTEestiDisplay-Medium-2e7a2911.woff2?1553506557") format("woff2"),
+    url("/fonts/GTEestiDisplay-Medium-275f8fec.woff?1553506557") format("woff");
+    font-weight:500;
+    font-style:normal;
+   }
+$family-primary: 'GT';
+
+.has-bg-img {
+    background: url('/homepage-hero.svg') no-repeat top left;
+    background-size: 100% 100%;
+}
+
+
+.card {
+    border-radius: 6px;
+}
+
+.is-dark {
+    background-color: #05263c;
+    padding: 8rem 1.5rem !important;
+}
+
+.is-dark .card {
+    background-color: #ffffff2b;
+}
+
+
+
+@import "~bulma/bulma"
