@@ -1,4 +1,4 @@
-const PrismicConfig = require('./prismic.config')
+// const PrismicConfig = require('./prismic.config')
 
 export default {
     mode: 'universal',
