@@ -36,8 +36,7 @@ export default {
     plugins: [
         '~/plugins/link-resolver.js',
         '~/plugins/html-serializer.js',
-        '~/plugins/prismic-vue.js',
-        { src: '~/plugins/mapbox', mode: 'client' }
+        '~/plugins/prismic-vue.js'
     ],
     /*
      ** Nuxt.js dev-modules
