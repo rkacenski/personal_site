@@ -1,44 +1,156 @@
 /* Import Bulma Utilities */
 @import '~bulma/sass/utilities/initial-variables';
 @import '~bulma/sass/utilities/functions';
+@import '~bulma/sass/utilities/mixins';
 
 @font-face {
     font-family:"GT";
-    src:url("/fonts/GTEestiDisplay-Regular-1b07bf16.ttf?1553506557") format("truetype"),
-    url("/fonts/GTEestiDisplay-Regular-d62d0c92.woff2?1553506557") format("woff2"),
-    url("/fonts/GTEestiDisplay-Regular-4c708fcc.woff?1553506557") format("woff");
+    src:url("/fonts/regular.ttf") format("truetype"),
+    url("/fonts/regular.woff2") format("woff2"),
+    url("/fonts/regular.woff") format("woff");
     font-weight:normal;
     font-style:normal
    }
    @font-face {
     font-family:"GT";
-    src:url("/fonts/GTEestiDisplay-Medium-bea79cdb.ttf?1553506557") format("truetype"),
-    url("/fonts/GTEestiDisplay-Medium-2e7a2911.woff2?1553506557") format("woff2"),
-    url("/fonts/GTEestiDisplay-Medium-275f8fec.woff?1553506557") format("woff");
+    src:url("/fonts/medium.ttf") format("truetype"),
+    url("/fonts/medium.woff2") format("woff2"),
+    url("/fonts/medium.woff") format("woff");
     font-weight:500;
     font-style:normal;
    }
 $family-primary: 'GT';
 
 .has-bg-img {
-    background: url('/homepage-hero.svg') no-repeat top left;
-    background-size: 100% 100%;
+    background: url('/banners-02.svg') no-repeat top;
+    background-size: auto;
+    background-size: cover;
+    position: relative;
+
+    @include mobile {
+        height: 280px;
+    }
+
+    @include tablet {
+        height: 340px;
+    }
+
+    @include desktop {
+        height: 440px;
+    }
+
+    @include widescreen {
+        height: 520px;
+    }
 }
 
-
-.card {
-    border-radius: 6px;
+.has-bg-img * {
+    filter: blur(0);
 }
 
-.is-dark {
+.has-bg-img .avatar {
+    height: 220px; 
+    position: absolute;
+    bottom: 0;
+    left: 38%;
+    height: 90%;
+}
+
+.banner-copy {
+    color: white !important;
+    text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.42);
+    
+
+    @include tablet {
+        margin-top: .5rem;
+    }
+
+    @include widescreen {
+        margin-top: 8.5rem;
+    }
+
+    @media only screen and (max-width: 768px) {
+        margin-top: 4.5rem
+    }
+
+    @media only screen and (max-width: 738px) {
+        max-width: 132px;
+        margin: 20px 0 0 12%;
+    }
+
+    @media only screen and (max-width: 508px) {
+        margin: 20px 0 0 0;
+    }
+}
+
+.is-blue {
     background-color: #05263c;
+}
+
+.work-list {
     padding: 8rem 1.5rem !important;
+}
+
+.work-page {
+    padding: 0 !important;
 }
 
 .is-dark .card {
     background-color: #ffffff2b;
 }
 
+.elavate {
+    border-radius: 6px;
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12) !important;
+}
+
+
+.back-home-enter-active, .work-leave-active  {
+    animation-duration: 0.4s;
+    animation-fill-mode: both;
+    animation-name: fade-blue;
+}
+
+.back-home-leave-active *, .back-home-enter-active *, .work-leave-active * {
+    animation-duration: 0.2s;
+    animation-fill-mode: both;
+    animation-name: hide-children;
+}
+
+.back-home-enter-active, .back-home-enter-active * {
+    animation-direction: reverse;
+}
+
+.work-enter-active, .back-home-leave-active  {
+    background-color: #05263c;
+}
+
+.work-enter-active * {
+    animation-duration: 0.4s;
+    animation-fill-mode: both;
+    animation-name: hide-children;
+    animation-direction: reverse;
+}
+
+@keyframes fade-blue {
+    from {
+        background-color: #05263c00
+    }
+
+    100% {
+        background-color: #05263c;
+    }
+}
+
+@keyframes hide-children {
+    from {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
 
 
 @import "~bulma/bulma"

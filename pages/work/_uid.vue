@@ -1,9 +1,17 @@
 <template>
-    <v-row>
-        <v-col>
-            <p>here</p>
-        </v-col>
-    </v-row>
+    <section class="hero is-blue work-page is-fullheight">
+        <nav class="level">
+            <div class="level-left">
+                <p class="level-item" @click="$router.back()">Close</p>
+            </div>
+            <div class="level-right">
+                <p class="level-item">Else</p>
+            </div>
+        </nav>
+        <div class="container">
+            <h2 class="title is-2 has-text-white">{{ document.title }}</h2>
+        </div>
+    </section>
 </template>
 
 <script>
@@ -11,6 +19,7 @@ import Prismic from 'prismic-javascript'
 import PrismicConfig from '~/prismic.config.js'
 // Importing all the slices components
 export default {
+    transition: 'work',
     head() {
         return {
             title: 'Prismic Nuxt.js Blog'
