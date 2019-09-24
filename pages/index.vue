@@ -77,22 +77,26 @@
                         </nuxt-link>
                     </div>
                     <div class="column is-4">
-                        <div class="box">
+                        <a
+                            class="box"
+                            href="https://github.com/rkacenski"
+                            target="_blank"
+                        >
                             <article class="media">
                                 <figure class="media-left">
                                     <p class="image is-96x96">
                                         <img
                                             class="rounded"
-                                            src="/thumbs/warning.png"
+                                            src="/thumbs/github.png"
                                         />
                                     </p>
                                 </figure>
                                 <div class="media-content">
-                                    <h3 class="subtitle is-4">Photography</h3>
-                                    <p>Updating the gallery, check back soon</p>
+                                    <h3 class="subtitle is-4">GitHub</h3>
+                                    <p>A few projects, and contributions</p>
                                 </div>
                             </article>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -107,24 +111,19 @@
                         :key="item.id"
                         class="column is-4"
                     >
-                        <nuxt-link :to="`/work/${item.uid}`">
+                        <a :href="item.url">
                             <div class="card elavate">
                                 <div class="card-image">
                                     <figure class="image is-4by3">
-                                        <img
-                                            :src="item.data.cover.url"
-                                            :lazy-src="
-                                                item.data.cover.thumb.url
-                                            "
-                                            alt="Placeholder image"
-                                        />
+                                        <img :src="item.thumb" />
                                     </figure>
                                 </div>
                                 <div class="card-content">
                                     <div class="content">
                                         <p class="subtitle is-4">
-                                            {{ item.data.title }}
+                                            {{ item.title }}
                                         </p>
+                                        <p v-text="item.desc"></p>
                                         <div class="tags">
                                             <span
                                                 v-for="tag in item.tags"
@@ -137,7 +136,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </nuxt-link>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -171,8 +170,8 @@
 </template>
 
 <script>
-import Prismic from 'prismic-javascript'
-import PrismicConfig from '~/prismic.config.js'
+// import Prismic from 'prismic-javascript'
+// import PrismicConfig from '~/prismic.config.js'
 export default {
     transition: 'back-home',
     components: {},
@@ -181,21 +180,34 @@ export default {
         return {}
     },
 
-    async asyncData({ context, error, req }) {
-        try {
-            // Query to get API object
-            const api = await Prismic.getApi(PrismicConfig.apiEndpoint, { req })
-            // Query to get posts content to preview
-            const items = await api.query(
-                Prismic.Predicates.at('document.type', 'work_items'),
-                { orderings: '[my.post.date desc]' }
-            )
-            return {
-                workItems: items.results
-            }
-        } catch (e) {
-            // Returns error page
-            error({ statusCode: 404, message: 'Page not found' })
+    asyncData({ context, error, req }) {
+        return {
+            workItems: [
+                {
+                    thumb: '/work/koroid.png',
+                    desc:
+                        'Scheduling platform for health care orangizations to prevent over worked employees',
+                    title: 'Koroid Web and Mobile App',
+                    tags: ['Laravel', 'Vue.js', 'Vuetify', 'MongoDB'],
+                    url: 'https://koroid.com'
+                },
+                {
+                    thumb: '/work/arbor.png',
+                    desc:
+                        'WIP, to help tree care companies effectivly plan work and track their daily routes',
+                    title: 'Arbor Care Planner',
+                    tags: ['Laravel', 'Vue.js', 'Bulma', 'MySQL', 'MapBox'],
+                    url: 'https://github.com/rkacenski/arbor-planner'
+                },
+                {
+                    thumb: '/work/vazoola.png',
+                    desc:
+                        'This was a long term project and has 2 platforms to connect influencers to advertisers. Vazola & ValuedVoice are a complete solution to middle man influencer marketing',
+                    title: 'Vazoola Influencer Platform',
+                    tags: ['Laravel', 'Vue.js', 'Bulma', 'Social APIs'],
+                    url: 'https://vazoola.com'
+                }
+            ]
         }
     }
 }
