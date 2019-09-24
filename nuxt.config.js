@@ -6,8 +6,8 @@ export default {
      ** Headers of the page
      */
     head: {
-        titleTemplate: '%s - ' + process.env.npm_package_name,
-        title: process.env.npm_package_name || '',
+        titleTemplate: 'Ryan Kacenski',
+        title: 'Ryan Kacenski',
         meta: [
             { charset: 'utf-8' },
             {
@@ -17,7 +17,7 @@ export default {
             {
                 hid: 'description',
                 name: 'description',
-                content: process.env.npm_package_description || ''
+                content: 'Ryan Kacenski - Problem Solver, Coder, and Pilot'
             }
         ],
         link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
