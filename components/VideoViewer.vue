@@ -1,6 +1,6 @@
 <template>
     <div class="column">
-        <div class="card elavate" @click="showVid = true">
+        <div class="card elavate" @click="showHandler">
             <div class="card-image">
                 <figure class="image is-square">
                     <img :src="vid.thumb" :alt="vid.title" />
@@ -58,6 +58,13 @@ export default {
     data() {
         return {
             showVid: false
+        }
+    },
+    methods: {
+        showHandler() {
+            if (this.vid.type === 'youtube') {
+                window.open(this.vid.url, '_blank')
+            } else this.showVid = true
         }
     }
 }

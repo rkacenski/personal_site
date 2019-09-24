@@ -109,9 +109,9 @@
                     <div
                         v-for="item in workItems"
                         :key="item.id"
-                        class="column is-4"
+                        class="column is-3 is-half-desktop is-6-tablet"
                     >
-                        <a :href="item.url">
+                        <a :href="item.url" target="_blank">
                             <div class="card elavate">
                                 <div class="card-image">
                                     <figure class="image is-4by3">
@@ -206,6 +206,14 @@ export default {
                     title: 'Vazoola Influencer Platform',
                     tags: ['Laravel', 'Vue.js', 'Bulma', 'Social APIs'],
                     url: 'https://vazoola.com'
+                },
+                {
+                    thumb: '/work/bilgore.png',
+                    desc:
+                        'Simple static site built with Nuxt.js, made for speed and simplicty. Deployed via Netlify, just like my site',
+                    title: `Gardener's Website`,
+                    tags: ['Nuxt.js', 'Bulma', 'Netlify'],
+                    url: 'https://dianebilogre.com'
                 }
             ]
         }
