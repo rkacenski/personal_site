@@ -40,21 +40,58 @@
                 <h2 class="title is-2">what's new</h2>
                 <div class="columns is-multiline">
                     <div class="column is-4">
-                        <div class="box">
-                            <h3 class="subtitle is-4">Writings</h3>
-                            <p>Snippets, thoughts, and tutorials</p>
-                        </div>
+                        <nuxt-link class="box" to="/blog">
+                            <article class="media">
+                                <figure class="media-left">
+                                    <p class="image is-96x96">
+                                        <img
+                                            class="rounded"
+                                            src="/thumbs/bloggin.webp"
+                                        />
+                                    </p>
+                                </figure>
+                                <div class="media-content">
+                                    <h3 class="subtitle is-4">Writings</h3>
+                                    <p>Snippets, thoughts, and tutorials</p>
+                                </div>
+                            </article>
+                        </nuxt-link>
+                    </div>
+
+                    <div class="column is-4">
+                        <nuxt-link class="box" to="/videos">
+                            <article class="media">
+                                <figure class="media-left">
+                                    <p class="image is-96x96">
+                                        <img
+                                            class="rounded"
+                                            src="/thumbs/vid1.png"
+                                        />
+                                    </p>
+                                </figure>
+                                <div class="media-content">
+                                    <h3 class="subtitle is-4">Videos</h3>
+                                    <p>Mostly drone and airplane videos</p>
+                                </div>
+                            </article>
+                        </nuxt-link>
                     </div>
                     <div class="column is-4">
                         <div class="box">
-                            <h3 class="subtitle is-4">Videos</h3>
-                            <p>Mostly drone and airplane videos</p>
-                        </div>
-                    </div>
-                    <div class="column is-4">
-                        <div class="box">
-                            <h3 class="subtitle is-4">Photography</h3>
-                            <p>A gallery of my recent photos</p>
+                            <article class="media">
+                                <figure class="media-left">
+                                    <p class="image is-96x96">
+                                        <img
+                                            class="rounded"
+                                            src="/thumbs/warning.png"
+                                        />
+                                    </p>
+                                </figure>
+                                <div class="media-content">
+                                    <h3 class="subtitle is-4">Photography</h3>
+                                    <p>Updating the gallery, check back soon</p>
+                                </div>
+                            </article>
                         </div>
                     </div>
                 </div>
@@ -114,12 +151,17 @@
                     <div class="column">
                         <h2 class="title is-2">about</h2>
                         <p>
-                            I was d gdgdghg dd dg dgd dg dg dd gdgd I was d
-                            gdgdghg dd dg dgd dg dg dd gdgd I was d gdgdghg dd
-                            dg dgd dg dg dd gdgd I was d gdgdghg dd dg dgd dg dg
-                            dd gdgd I was d gdgdghg dd dg dgd dg dg dd gdgd I
-                            was d gdgdghg dd dg dgd dg dg dd gdgd dg d
-                            gdgdgdgdgdgdgd gd gdg dfgdf gdg
+                            I started learning how to code at 13, working as a
+                            freelancer at 14. Now at 25 constantly learning
+                            everything I can about new technologies and
+                            aviation. In between, I've worked with startups and
+                            small companies to build great software products,
+                            and development teams. I try to spend time not just
+                            with the code, but also helping a company grow.
+                            Making sure the products & tools I build are useful
+                            to the people using them. I also have a passion for
+                            aviation, and hold a Private Pilot Certificate with
+                            130+ hours.
                         </p>
                     </div>
                 </div>
@@ -158,3 +200,9 @@ export default {
     }
 }
 </script>
+
+<style lang="scss">
+.rounded {
+    border-radius: 5px;
+}
+</style>
