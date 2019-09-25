@@ -46,7 +46,7 @@
                                     <p class="image is-96x96">
                                         <img
                                             class="rounded"
-                                            src="/thumbs/bloggin.webp"
+                                            src="/thumbs/blogging.gif"
                                         />
                                     </p>
                                 </figure>
@@ -145,7 +145,7 @@
             <div class="container">
                 <div class="columns">
                     <div class="column">
-                        <img class="elavate" src="/roll2.gif" alt="Pilot" />
+                        <img class="elavate" src="/me.jpg" alt="Pilot" />
                     </div>
                     <div class="column">
                         <h2 class="title is-2">about</h2>
