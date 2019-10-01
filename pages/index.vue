@@ -19,10 +19,10 @@
                             <p
                                 class="is-size-5 is-size-6-touch is-hidden-mobile"
                             >
-                                I like to create digtal products, fly planes,
+                                I like to create digital products, fly planes,
                                 make videos and take photos. I'm contantly
                                 working with new technologies and learning new
-                                skills
+                                skills 
                             </p>
                         </div>
                     </div>
@@ -30,7 +30,7 @@
             </div>
         </section>
         <div class="notification is-hidden-tablet">
-            I like to create digtal products, fly planes, make videos and take
+            I like to create digital products, fly planes, make videos and take
             photos. I'm contantly working with new technologies and learning new
             skills
         </div>
