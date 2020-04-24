@@ -159,8 +159,7 @@
                             with the code, but also helping a company grow.
                             Making sure the products & tools I build are useful
                             to the people using them. I also have a passion for
-                            aviation, and hold a Private Pilot Certificate with
-                            130+ hours.
+                            aviation, and hold a Private Pilot Certificate.
                         </p>
                     </div>
                 </div>
