@@ -20,7 +20,7 @@
                                 class="is-size-5 is-size-6-touch is-hidden-mobile"
                             >
                                 I like to create digital products, fly planes,
-                                make videos and take photos. I'm contantly
+                                make videos and take photos. I'm constantly
                                 working with new technologies and learning new
                                 skills 
                             </p>
